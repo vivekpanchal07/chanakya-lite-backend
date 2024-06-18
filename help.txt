@@ -1,0 +1,6 @@
+to run the server
+
+npm run dev (as we are using nodemon for developen)
+
+npm start (during production)
+
