@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const connectDB = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
+const passwordRoutes = require('./routes/passwordRoutes');
 
 dotenv.config();
 const app = express();
@@ -13,7 +14,7 @@ app.use(bodyParser.json());
 
 // Routes
 app.use('/api/users', userRoutes);
-
+app.use('/api/passwords', passwordRoutes);
 // Connect to MongoDB
 connectDB();
 
